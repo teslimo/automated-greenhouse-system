@@ -76,48 +76,33 @@ crop selection and parameter display.
 ## Components Used
 
   ----------------------------------------------------------------------------
-  **Component**   **Description**                     **Function in System**
+  **Component**   ||**Description**                    ||**Function in System**
   --------------- ----------------------------------- ------------------------
-  **ESP32**       Wi-Fi-enabled microcontroller with  Central controller for
-                  GPIOs and ADCs                      sensors, actuators, and
-                                                      logic
+ESP32  ||Wi-Fi-enabled microcontroller with GPIOs and ADCs ||Central controller forsensors, actuators, and logic
 
-  **DHT11         Digital temperature and humidity    Measures temperature and
-  Sensor**        sensor                              humidity
+DHT11 Sensor  ||Digital temperature and humidity sensor ||Measures temperature and humidity
 
-  **Soil Moisture Analog soil moisture detection      Monitor soil moisture
-  Sensors (2x)**  probes                              levels for irrigation
-                                                      control
+Soil Moisture Sensors (2x)  ||Analog soil moisture detection probes ||Monitor soil moisture levels for irrigation control
 
-  **16x4 LCD      Liquid crystal display with I2C     Displays crop info,
-  Display (I2C)** backpack                            sensor values, and time
+16x4 LCD Display (I2C)  ||Liquid crystal display with I2C backpack ||Displays crop info,sensor values
 
-  **Keypad (4x4   Matrix keypad with I2C interface    User input for crop
-  I2C)**                                              selection and navigation
+Keypad (4x4 I2C)  ||Matrix keypad with I2C interface ||User input for cropselection and navigation
 
-  **IRLZ44N       Relay driver board for AC/DC        Switch devices(Grow light, 
-    MOSFET                                              fan, humidifier, pump)
-                                       
-  **DC Pump       Mini water pump                     Irrigation based on soil
-  (5V)**                                              moisture
+IRLZ44N  ||Driver for DC ||Switch devices (Grow light, MOSFET fan, humidifier, pump)
 
-  **Fan (12V)**   Cooling fan                         Temperature regulation
+DC Pump (5V)  ||Mini water pump ||Irrigation based on soil  moisture
 
-  **Ultrasonic    Mist generator                      Increases humidity
-  Humidifier                                          
-  (5V)**                                              
+Fan (12V)  ||Cooling fan ||Temperature and humidity regulation
 
-  **LED Grow      Artificial lighting                 Provides light for
-  Light (12V)**                                       photosynthesis
+Ultrasonic Humidifier (5V)  ||Mist generator ||Increases humidity and cools temperature
 
-  **Buck          DC-DC step-down converters          Power distribution to
-  Converters (5V                                      ESP32, sensors, and
-  & 12V)**                                            actuators
+LED Grow Light (12V)  ||Artificial lighting ||Provides light for photosynthesis
 
-  **EEPROM        Non-volatile memory                 Stores crop selection
-  (Internal to                                        and optimal parameters
-  ESP32)**                                       
+Buck Converters (5V & 12V)  ||DC-DC step-down converters ||Power distribution to ESP32, sensors, andactuators
 
-  **Heat lamp**   intensity control                   Regurates temperature and 
-                  via dimmer circuit                  humidity of greenhouse
+EEPROM (Internal to ESP32)  ||Non-volatile memory ||Stores crop selection and optimal parameters 
+
+AC dimmer circuit  ||Custom built ||Regulates intensity of heat lamp
+
+Heat lamp  ||Intensity control via dimmer circuit ||Regurates temperature and  humidity of greenhouse 
   ----------------------------------------------------------------------------
